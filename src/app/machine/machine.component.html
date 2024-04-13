@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="row">
+        <div class="col-5 p-2 m-2" *ngFor="let type of types; trackBy:tracking">
+            <h4 class="text-center font-weight-bold">{{type}}</h4>
+            <button class="btn btn-sm btn-danger mb-2" (click)="click(type)">ADD</button>
+            <div class="border p-2" *ngFor="let item of individual(type); trackBy:tracking">
+                <ul class="list-group">
+                    <li class="list-group-item">{{item.text}}</li> 
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

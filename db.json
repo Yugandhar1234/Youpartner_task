@@ -1,0 +1,272 @@
+{
+  "users": [],
+  "todos": [
+    {
+      "id": 1,
+      "title": "Nani Thota"
+    },
+    {
+      "title": "yugandhar Thota",
+      "id": 2
+    }
+  ],
+  "employee": [
+    {
+      "firstName": "Durga",
+      "lastName": "Prasadh",
+      "email": "durgaprasad@gamil.com",
+      "date": "2023-12-17T18:30:00.000Z",
+      "gender": "male",
+      "companyName": "shahertzz",
+      "designation": "developer",
+      "id": 3
+    },
+    {
+      "firstName": "yugandhar",
+      "lastName": "Thota",
+      "email": "yugandharthota@gmail.com",
+      "date": "2023-12-20T18:30:00.000Z",
+      "gender": "male",
+      "companyName": "TCS",
+      "designation": "developer",
+      "id": 4
+    }
+  ],
+  "quizz": [
+    {
+      "questionId": 1,
+      "question": "Which of the following is correct about TypeScript?",
+      "options": [
+        {
+          "option": "Angular is based on JavaScript",
+          "isCorrect": false
+        },
+        {
+          "option": "TypeScript is a superset of JavaScript",
+          "isCorrect": true
+        },
+        {
+          "option": "JavaScript is a subset of TypeScript",
+          "isCorrect": false
+        },
+        {
+          "option": "All of the above",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 2,
+      "question": "Which of the following is correct about TypeScript?",
+      "options": [
+        {
+          "option": "Streams data in asynchronously",
+          "isCorrect": false
+        },
+        {
+          "option": "Streams data in synchronously.",
+          "isCorrect": false
+        },
+        {
+          "option": "Both",
+          "isCorrect": true
+        },
+        {
+          "option": "None of above",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 3,
+      "question": "Which of the following is not a hook application life cycle",
+      "options": [
+        {
+          "option": "ngOnChanges",
+          "isCorrect": false
+        },
+        {
+          "option": "ngVewStart",
+          "isCorrect": true
+        },
+        {
+          "option": "ngOnIt",
+          "isCorrect": false
+        },
+        {
+          "option": "ngAfterViewInIt",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 4,
+      "question": "Which of the following is correct about TypeScript?",
+      "options": [
+        {
+          "option": "Streams data in asynchronously",
+          "isCorrect": false
+        },
+        {
+          "option": "Streams data in synchronously.",
+          "isCorrect": false
+        },
+        {
+          "option": "Both",
+          "isCorrect": true
+        },
+        {
+          "option": "None of above",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 5,
+      "question": "Which of the following is correct about TypeScript?",
+      "options": [
+        {
+          "option": "Angular is based on JavaScript",
+          "isCorrect": false
+        },
+        {
+          "option": "TypeScript is a superset of JavaScript",
+          "isCorrect": true
+        },
+        {
+          "option": "JavaScript is a subset of TypeScript",
+          "isCorrect": false
+        },
+        {
+          "option": "All of the above",
+          "isCorrect": false
+        }
+      ]
+    }
+  ],
+  "moviesTickets": {
+    "message": "Movies Info",
+    "data": [
+      {
+        "movieName": "RRR",
+        "price": 200,
+        "rating": "8.5",
+        "tickets": [
+          {
+            "row": "A",
+            "seats": 10
+          },
+          {
+            "row": "B",
+            "seats": 6
+          },
+          {
+            "row": "C",
+            "seats": 5
+          },
+          {
+            "row": "D",
+            "seats": 4
+          }
+        ],
+        "banner": "https://upload.wikimedia.org/wikipedia/en/thumb/d/d7/RRR_Poster.jpg/220px-RRR_Poster.jpg",
+        "shows": [
+          "11.45 AM"
+        ],
+        "description": "Rajamouli came across stories about the lives of Rama Raju and Bheem and connected the coincidences between them, imagining what would have happened had they met, and been friends. The film was announced in March 2018"
+      },
+      {
+        "movieName": "KGF Chaper-2",
+        "price": 180,
+        "rating": "9.3",
+        "tickets": [
+          {
+            "row": "A",
+            "seats": 6
+          },
+          {
+            "row": "B",
+            "seats": 9
+          },
+          {
+            "row": "C",
+            "seats": 5
+          },
+          {
+            "row": "D",
+            "seats": 10
+          }
+        ],
+        "banner": "https://e1.pxfuel.com/desktop-wallpaper/436/844/desktop-wallpaper-kgf-chapter-2-kgf-2.jpg",
+        "shows": [
+          "1 PM",
+          "2.45 PM",
+          "6 PM",
+          "9 PM"
+        ],
+        "description": "In the blood-soaked Kolar Gold Fields, Rocky's name strikes fear into his foes, while the government sees him as a threat to law and order. Rocky must battle threats from all sides for unchallenged supremacy"
+      },
+      {
+        "movieName": "Devara",
+        "price": 180,
+        "rating": "9",
+        "tickets": [
+          {
+            "row": "A",
+            "seats": 10
+          },
+          {
+            "row": "B",
+            "seats": 6
+          },
+          {
+            "row": "C",
+            "seats": 10
+          },
+          {
+            "row": "D",
+            "seats": 9
+          }
+        ],
+        "banner": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Devara.jpg/800px-Devara.jpg",
+        "shows": [
+          "10 AM",
+          "2.45 PM",
+          "9 PM"
+        ],
+        "description": "Devara ( transl. God), also known as Devara: Part 1, is an upcoming Indian Telugu-language action-drama film written and directed by Koratala Siva"
+      },
+      {
+        "movieName": "Salaar",
+        "price": 180,
+        "rating": "9.3",
+        "tickets": [
+          {
+            "row": "A",
+            "seats": 7
+          },
+          {
+            "row": "B",
+            "seats": 5
+          },
+          {
+            "row": "C",
+            "seats": 10
+          },
+          {
+            "row": "D",
+            "seats": 6
+          }
+        ],
+        "banner": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTi-BjUQ1O0QyP-7nYN5gj0sjXcp664QxS-_NYAMwsvnw&s",
+        "shows": [
+          "4 PM",
+          "7 AM",
+          "1 PM",
+          "6 PM"
+        ],
+        "description": "Set in the fictional dystopian city-state of Khansaar, the film follows the friendship between Deva (Prabhas), a tribesman, and Varadha (Prithviraj), the prince ..."
+      }
+    ]
+  }
+}

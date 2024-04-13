@@ -1,0 +1,6 @@
+.mat-mdc-form-field-focus-overlay {
+    background-color: white;
+  }
+  .mdc-text-field--filled:not(.mdc-text-field--disabled) {
+    background-color: white
+  }

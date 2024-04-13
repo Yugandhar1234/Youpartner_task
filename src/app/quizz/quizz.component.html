@@ -1,0 +1,99 @@
+<div class="container">
+    <div class="row d-flex justify-content-center align-items-center"  style="height: 100vh;">
+        <div class="text-center" 
+            *ngIf="isStart">
+            <button type="button" class="btn btn-sm btn-outline-primary" (click)="start()">Start Quizz</button>
+        </div>
+
+        <div class="col-12 col-md-6" *ngIf="showInsrtuctions">
+            <div class="card">
+                <div class="card-header card-head">
+                    <div >
+                       <h6 class="m-1"> Awesome Quizz Application</h6>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <p>1. You con select only one option in the list</p>
+                        <p>2. You have only 20sec for Each questions</p>
+                        <p>3. If you are faceing any problem contact support team</p>
+                    </div>
+                </div>
+                <div class="card-footer py-2">
+                    <div class="text-end">
+                        <button type="button" class="btn btn-sm btn-primary me-2" (click)="cancleQuizz()">cancel</button>
+                        <button type="button" class="btn btn-sm btn-primary" (click)="startQuizz()">Start Quizz</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-lg-6 mt-5" *ngIf="showQuizz">
+            <div class="card">
+                <div class="card-header card-head d-flex align-items-center justify-content-between py-2">
+                    <div >
+                       <h6 class="m-1"> Awesome Quizz Application</h6>
+                    </div>
+                    <div class="ml-auto">
+                    <span class="timer m-1"> Time Off<span class="digits"> {{currentTime}}</span></span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <div>
+                            <p class="fw-bold"><span>{{questionData[currentQuestion].questionId}} </span>{{questionData[currentQuestion].question}}</p>
+                        </div>
+                        <div>
+                            <p class="border py-1 px-3 rounded" *ngFor="let q of questionData[currentQuestion].options"
+                            (click)="selectedOption(q)" [ngClass]="{'select':q.isSelected, 'not-select':q.isSelected==undefined || q.isSelected==false,
+                        'correct':q.isSelected && q.isCorrect, 'disable':q.isdisable}"
+                            >{{q.option}}</p>
+                          
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer d-flex align-items-center justify-content-between py-2">
+                    <div >{{questionData[currentQuestion].questionId}} questions of {{questionData.length}}
+                    </div>
+                    <div>
+                        <button type="button" class="btn btn-sm btn-outline-warning" *ngIf="questionData[currentQuestion].questionId==questionData.length"
+                        (click)="finish()">Finish</button>
+                        <button type="button" class="btn btn-sm btn-primary"  *ngIf="questionData[currentQuestion].questionId!==questionData.length"
+                        (click)="nextQuestion()">Next Que</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="col-12 col-md-6 d-flex justify-content-center align-items-center" *ngIf="showResult">
+            <div class="card">
+                <div class="card-header card-head d-flex align-items-center justify-content-between py-2">
+                    <div >
+                       <h6 class="m-1"> Awesome Quizz Application</h6>
+                    </div>
+                    <div class="ml-auto">
+                       <span class="timer m-1"> Time Off<span class="digits">00</span></span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <p class="fw-bold"><span>1. </span>What does php stands for?</p>
+                    </div>
+                    <div>
+                        <p class="border py-1 px-3 rounded" style="background-color: bisque; color: #000;">hyperText</p>
+                        <p class="border py-1 px-3 rounded" style="background-color: bisque; color: #000;">hyperText</p>
+                        <p class="border py-1 px-3 rounded" style="background-color: bisque; color: #000;">hyperText</p>
+                        <p class="border py-1 px-3 rounded" style="background-color: bisque; color: #000;">hyperText</p>
+                    </div>
+                </div>
+                <div class="card-footer d-flex align-items-center justify-content-between py-2">
+                    <div >
+                        3 of 6 questions
+                    </div>
+                    <div>
+                        <button type="button" class="btn btn-sm btn-primary">Next Que</button>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+    </div>
+</div>

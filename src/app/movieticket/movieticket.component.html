@@ -1,0 +1,43 @@
+<div class="container container-md-fluid">
+    <div class="row m-2">
+        <div class="col-12 col-md-3 my-2 my-md-0"  *ngFor="let movie of moviesList">
+            <div class="card m-0" (click)="selectedMovie(movie)">
+                <div class="card-header text-center" 
+                [ngClass]="movie.movieName==selectedMovieInfo?.movieName?'bg-success':''">{{movie.movieName}}</div>
+                <div class="card-body">{{movie.description | slice:0:120}}...</div>
+                <div class="card-footer d-flex justify-content-between align-items-center">
+                    <div >
+                        <span>{{movie.rating}}</span>
+                        <span class="material-symbols-outlined" style="font-size: 14px;">
+                            star_half
+                        </span>
+                    </div>
+                    <div >Price:{{movie.price}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-12 col-md-4">
+            <div>
+                <h4>Available Shows</h4>
+                <button type="button" class="btn btn-sm btn-secondary mx-1" *ngFor="let show of selectedMovieInfo?.shows"
+                (click)="selectedShow(show)" [ngClass]="show==selectedShowInfo?'btn-success':'btn-secondary'" >{{show}}</button>
+                <button type="button" class="btn btn-sm btn-info" (click)="slots()">Slots</button>
+            </div>
+    
+            <div  class="d-flex flex-column mt-3" >
+                <input type="text" name="ticket" [formControl]="control">
+                <button type="button" class="btn btn-sm btn-warning my-3" (click)="Book()">Book ticket</button>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 offset-md-2" >
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Movie Name : {{selectedMovieInfo?.movieName}}</li>
+                <li class="list-group-item">Show Details {{selectedShowInfo}}</li>
+                <li class="list-group-item">No of tickets: {{tickets}}</li>
+                <li class="list-group-item">Total Price:{{selectedMovieInfo?.price}} </li>
+            </ul>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="card mt-4">
+                <div class="card-header bg-secondary text-center text-white">SERVER SIDE PAGINATION</div>
+                <div class="card-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Name</th>
+                                <th>Contact </th>
+                                <th>email</th>
+                                <th>City</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let user of allCandidates">
+                                <td>{{user.candidateId}}</td>
+                                <td>{{user.name}}</td>
+                                <td>{{user.contactNo}}</td>
+                                <td>{{user.email}}</td>
+                               <td>{{user.city}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

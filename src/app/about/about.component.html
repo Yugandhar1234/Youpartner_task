@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="row gx-5">
+        <p class="display-6 text-center">Boards</p>
+        <div class="col-4">
+            <div class="card" (drop)="onDrop($event,'new')" (dragover)="ondragOver($event)">
+                <div class="card-title text-center my-1">New Tickets</div>
+                <div class="card-body">
+                    <div class="element py-3 px-1" *ngFor="let ticket of filter('new')" 
+                    (dragstart)="drag(ticket)" draggable="true">
+                        <span>{{ticket.id}} <br>{{ticket.name}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="card" (drop)="onDrop($event,'inprogress')" (dragover)="ondragOver($event)">
+                <div class="card-title text-center my-1">Inprogess Tickets</div>
+                <div class="card-body">
+                    <div class="element py-3 px-1" *ngFor="let ticket of filter('inprogress')"
+                    (dragstart)="drag(ticket)" draggable="true">
+                        <span>{{ticket.id}} <br>{{ticket.name}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="card" (drop)="onDrop($event,'done')" (dragover)="ondragOver($event)">
+                <div class="card-title text-center my-1">Completed Tickets</div>
+                <div class="card-body">
+                    <div class="element py-3 px-1" *ngFor="let ticket of filter('done')"
+                    (dragstart)="drag(ticket)" draggable="true">
+                        <span>{{ticket.id}} <br>{{ticket.name}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

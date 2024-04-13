@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row">
+      <div class="col-3">
+        <label for="">Countries</label>
+        <select class="form-select" #s1 (change)="countrychange($event.target)">
+          <option [value]="country.iso3" *ngFor="let country of countries">{{country.country}}</option>
+        </select>
+      </div>
+      <div class="col-3">
+        <label for="">state</label>
+        <select class="form-select">
+          <!-- <option >select state</option> -->
+          <option [value]="city" *ngFor="let city of cities">{{city}}</option>
+        </select>
+      </div>
+      <div class="col-3">
+        <label for="">city</label>
+        <select class="form-select">
+          <option selected>select city</option>
+          <option value="1">One</option>
+        </select>
+      </div>
+    </div>
+  </div>

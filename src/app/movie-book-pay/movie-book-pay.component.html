@@ -1,0 +1,21 @@
+<!-- 
+<Pre>{{movieInfo | json}}</Pre> -->
+
+<div class="conatiner bg-dark ">
+    <div class="row">
+        <div class="col-12 d-flex justify-content-center" style="border: 3px solid red;">
+          <div>
+                <h3 class="text-white">{{movieInfo.movieName}}</h3>
+                <div >
+                    <img [src]="movieInfo.banner" alt="" style="width: 500px;" height="200px">
+                </div>
+                <div class="container-fluid">
+                    <div class="d-flex  text-white my-1" *ngFor="let row of movieInfo?.tickets" >{{row.row}}
+                        <span class="seat" [ngClass]="select(row.row,seat)?'occupied':''"
+                         *ngFor="let seat of getSeats(row.seats)" (click)="seats(row.row,seat)">{{seat}}</span>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </div>
+</div>

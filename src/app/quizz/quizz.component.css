@@ -1,0 +1,28 @@
+.card-head{
+    background-color: white;
+    border-bottom: 2px solid blue;
+}
+.card-footer{
+    background-color: white;
+}
+.timer{
+    background-color: lightblue;
+    padding: 6px;
+    border-radius: 5px;
+}
+.digits{
+    background-color: black;
+    color:whitesmoke;
+    padding: 2px;
+    border-radius: 5px;
+    margin-left: 2px;
+}
+.select{
+    background-color: blue;
+}
+.not-select{
+    background-color: bisque; color: #000;
+}
+.correct{
+    background-color: aquamarine; color: #000;;
+}

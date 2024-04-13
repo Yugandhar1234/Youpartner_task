@@ -1,0 +1,36 @@
+<div class="container-fluid mt-5">
+    <div class="row d-flex align-items-center">
+        <div class="col-9">
+            <div class="m-2">
+                <input type="text" name="" id="" [formControl]="search" class="form-control" style="background-color: white;">
+            </div>
+        </div>
+        <div class="col-3">
+            <button class="btn btn-sm btn-danger" type="button" style="background-color: brown;" (click)="searchMovie()">search</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4 p-3" *ngFor="let movie of moviesBysearch">
+            <div class="row g-3 ">
+                <div class="col-4">
+                   <img [src]="movie.poster_path">
+                </div>
+                <div class="col-8 text-white">
+                    <h2>{{movie.title}}</h2>
+                    <!-- <p>{{movie.overview}}</p> -->
+                </div>
+            </div>
+            <!-- <div class="card  rounded">
+                <div class="card-header">
+                   <img [src]="movie.backdrop_path" alt="">
+                    
+                </div>
+                <div class="card-body" style="color: whitesmoke;">
+                    <h5 class="card-title">{{movie.title}}</h5>
+                    <p class="card-text">{{movie.release_date | date: 'dd/MM/yyyy'}}</p>
+                    <p>{{movie.overview}}</p>
+                </div>
+            </div> -->
+        </div>
+    </div>
+</div>
